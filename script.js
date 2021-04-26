@@ -1,15 +1,34 @@
+/*
+    Number variables
+*/
 let currentNumber = "";
+let outputNumber = "";
 
-
+/*
+    Button pressed status 
+*/
+let isPlusPressed = false;
+let isMinusPressed = false;
+let isMultiplyPressed = false;
+let isDividePressed = false;
 /*
     Getter & Setter function
 */
 function getNumber(){
     return currentNumber;
 }
+function getOutputNumber(){
+    return outputNumber;
+}
 
+function setOutputNumber(input){
+    outputNumber = input;
+}
 function setNumber(input){
     currentNumber += input;
+}
+function setCurrentNumber(input){
+    currentNumber = input;
 }
 function setCleanedInput(input){
     currentNumber = input;
@@ -38,7 +57,7 @@ function cleanInput(){
     Screen function
 */
 function updateOutput(){
-    return getNumber();
+    document.getElementById('output_screen').innerText = getOutputNumber();
 }
 
 function displayInput(){
@@ -63,15 +82,157 @@ function resetButton(){
 */
 function percentButton(){}
 
-function divideButton(){}
+function divideButton(){
+    let currentOutputNumber = getOutputNumber();
+    let outputSize = currentOutputNumber.length;
 
-function multiplyButton(){}
+    let output = 0.0;
+    let currentNumb = 0.0;
 
-function minusButton(){}
+    isDividePressed = true;
+    if (outputSize === 0){ 
+        setOutputNumber(getNumber());
+        setCurrentNumber("");
+        updateOutput();
+        return;
+    }
 
-function plusButton(){}
+    currentNumb = parseFloat(getNumber());
+    output = parseFloat(getOutputNumber());
 
-function equalButton(){}
+    output /= currentNumb;
+    console.log(output);
+
+    setOutputNumber(output.toString());
+    setCurrentNumber("");
+    updateOutput();
+}
+
+function multiplyButton(){
+    let currentOutputNumber = getOutputNumber();
+    let outputSize = currentOutputNumber.length;
+
+    let output = 0.0;
+    let currentNumb = 0.0;
+
+    isMultiplyPressed = true;
+    if (outputSize === 0){ 
+        setOutputNumber(getNumber());
+        setCurrentNumber("");
+        updateOutput();
+        return;
+    }
+
+    currentNumb = parseFloat(getNumber());
+    output = parseFloat(getOutputNumber());
+
+    output *= currentNumb;
+    console.log(output);
+
+    setOutputNumber(output.toString());
+    setCurrentNumber("");
+    updateOutput();
+}
+
+function minusButton(){
+    let currentOutputNumber = getOutputNumber();
+    let outputSize = currentOutputNumber.length;
+
+    let output = 0.0;
+    let currentNumb = 0.0;
+
+    isMinusPressed = true;
+    if (outputSize === 0){ 
+        setOutputNumber(getNumber());
+        setCurrentNumber("");
+        updateOutput();
+        return;
+    }
+
+    currentNumb = parseFloat(getNumber());
+    output = parseFloat(getOutputNumber());
+
+    output -= currentNumb;
+    console.log(output);
+
+    setOutputNumber(output.toString());
+    setCurrentNumber("");
+    updateOutput();
+}
+
+function plusButton(){
+    let currentOutputNumber = getOutputNumber();
+    let outputSize = currentOutputNumber.length;
+
+    let output = 0.0;
+    let currentNumb = 0.0;
+
+    isPlusPressed = true;
+    if (outputSize === 0){ 
+        setOutputNumber(getNumber());
+        setCurrentNumber("");
+        updateOutput();
+        return;
+    }
+
+    currentNumb = parseFloat(getNumber());
+    output = parseFloat(getOutputNumber());
+
+    output += currentNumb;
+
+    setOutputNumber(output.toString());
+    setCurrentNumber("");
+    updateOutput();
+}
+
+function equalButton(){
+    let currentOutputNumber = getOutputNumber();
+    let outputSize = currentOutputNumber.length;
+
+    let currentNumb = getNumber();
+
+    if (outputSize === 0){
+        setOutputNumber(getNumber());
+        setCurrentNumber("0");
+        updateOutput();
+        return;
+    }
+    if (isPlusPressed){
+        plusButton();
+        setCurrentNumber("0");
+        displayInput();
+        isPlusPressed = false;
+    }
+    if (isMinusPressed){
+        minusButton();
+        setCurrentNumber("0");
+        displayInput();
+        isMinusPressed = false;
+    }
+    if (isMultiplyPressed){
+        multiplyButton();
+        setCurrentNumber("0");
+        displayInput();
+        isMultiplyPressed = false;
+    }
+    if (isDividePressed){
+        divideButton();
+        setCurrentNumber("0");
+        displayInput();
+        isDividePressed = false;
+    }
+    if (!isPlusPressed && !isMinusPressed && !isMultiplyPressed && !isDividePressed){
+        let outNum = parseFloat(currentOutputNumber);
+        let inNum = parseFloat(currentNumb);
+
+        outNum += inNum;
+        setOutputNumber(outNum.toString());
+        updateOutput();
+
+        setCurrentNumber("0");
+        displayInput();
+    }
+}
 
 /*
     Input button functions

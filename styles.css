@@ -20,7 +20,8 @@
     font-family: 'Zen Dots', cursive;
     font-weight: bold;
     font-size: 30px;
-    text-align: center;
+    text-align: end;
+    vertical-align: text-bottom;
 }
 #input_screen{
     position: absolute;
@@ -34,7 +35,7 @@
     font-family: 'Zen Dots', cursive;
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
+    text-align: end;
 }
 #ac_button{
     display: flex;
