@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculator App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" 
+        rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="calculator_body">
+            <div class="calculator_screen">
+                <div id="output_screen"></div>
+
+                <div id="input_screen"></div>
+            </div>
+            <div class="button_pad">
+                <button type="button" id="ac_button" onclick="resetButton()">AC</button>
+                <button type="button" id="plus_minus_button" onclick="">+/-</button>
+                <button type="button" id="percent_button" onclick="">%</button>
+                <button type="button" id="divide_button" onclick="">/</button>
+                <button type="button" id="seven_button" onclick="sevenButton()">7</button>
+                <button type="button" id="eight_button" onclick="eightButton()">8</button>
+                <button type="button" id="nine_button" onclick="nineButton()">9</button>
+                <button type="button" id="multiply_button" onclick="">*</button>
+                <button type="button" id="four_button" onclick="fourButton()">4</button>
+                <button type="button" id="five_button" onclick="fiveButton()">5</button>
+                <button type="button" id="six_button" onclick="sixButton()">6</button>
+                <button type="button" id="minus_button" onclick="">-</button>
+                <button type="button" id="one_button" onclick="oneButton()">1</button>
+                <button type="button" id="two_button" onclick="twoButton()">2</button>
+                <button type="button" id="three_button" onclick="threeButton()">3</button>
+                <button type="button" id="plus_button" onclick="">+</button>
+                <button type="button" id="zero_button" onclick="zeroButton()">0</button>
+                <button type="button" id="dot_button" onclick="dotButton()">.</button>
+                <button type="button" id="equal_button" onclick="">=</button>
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

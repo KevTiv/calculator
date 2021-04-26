@@ -1,0 +1,407 @@
+.calculator_body{
+    position: absolute;
+    width: 600px;
+    height: 790px;
+    left: 988px;
+    top: 101px;
+
+    background: #A37573;
+    border-radius: 35px;
+}
+#output_screen{
+    position: absolute;
+    width: 390px;
+    height: 70px;
+    left: 174px;
+    top: 240px;
+
+    background: #F0ECEC;
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+#input_screen{
+    position: absolute;
+    width: 390px;
+    height: 50px;
+    left: 174px;
+    top: 310px;
+
+    background: #F0ECEC;
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+#ac_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 77px;
+    top: 391px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: end;
+}
+#plus_minus_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 201px;
+    top: 391px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+#percent_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 325px;
+    top: 391px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+#divide_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 449px;
+    top: 391px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+#seven_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 77px;
+    top: 464px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#eight_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 201px;
+    top: 467px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#nine_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 325px;
+    top: 467px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#multiply_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 446px;
+    top: 467px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+#four_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 77px;
+    top: 540px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#five_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 201px;
+    top: 540px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#six_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 325px;
+    top: 540px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#minus_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 449px;
+    top: 540px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+#one_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 77px;
+    top: 616px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#two_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 201px;
+    top: 613px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#three_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 325px;
+    top: 616px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#plus_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 449px;
+    top: 616px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#zero_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 236px;
+    height: 48px;
+    left: 77px;
+    top: 692px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+#dot_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 325px;
+    top: 692px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+#equal_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50%,50%;
+
+    position: absolute;
+    width: 118px;
+    height: 48px;
+    left: 449px;
+    top: 692px;
+
+    border-radius: 60px;
+    background: rgb(141, 69, 69);
+
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
